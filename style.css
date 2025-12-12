@@ -1,0 +1,359 @@
+/* =========================================================
+   1. THEME VARIABLES (Original color palette)
+   ========================================================= */
+:root {
+    --bg-gradient: linear-gradient(135deg, #e8eeff 0%, #d7e1ff 100%);
+    --glass-bg: rgba(255, 255, 255, 0.8);
+
+    --primary: #b7c8ef;
+    --primary-dark: #909acb;
+    --primary-light: #d8e2ff;
+
+    --text-dark: #2f3547;
+    --text-light: #ffffff;
+
+    --radius-lg: 22px;
+    --radius-md: 16px;
+
+    --transition: 0.3s ease;
+}
+
+/* =========================================================
+   2. RESET / GLOBAL
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   3. BASE ELEMENTS
+   ========================================================= */
+body {
+    font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    padding: 30px;
+    color: var(--text-dark);
+}
+
+img {
+    width: 260px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin-top: 20px;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.2);
+}
+
+h2 {
+    color: #8ba2d9;
+    font-size: 2em;
+    margin-bottom: 18px;
+}
+
+p {
+    line-height: 1.75;
+    font-size: 1.13em;
+    opacity: 0.92;
+    color: #333;
+}
+
+/* =========================================================
+   4. LAYOUT
+   ========================================================= */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+section {
+    padding: 45px 35px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/* =========================================================
+   5. HEADER
+   ========================================================= */
+header {
+    background: linear-gradient(120deg, #b7c8ef, #909acb);
+    color: var(--text-light);
+    padding: 60px 35px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+}
+
+header p {
+    margin-top: 12px;
+    font-size: 1.2em;
+}
+
+/* =========================================================
+   6. NAVIGATION
+   ========================================================= */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding: 20px;
+    background: #f4f6ff;
+    border-bottom: 3px solid #b7c8ef;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background: #b7c8ef;
+    padding: 10px 26px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1em;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    background: #909acb;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* =========================================================
+   7. HOMEPAGE HOBBY CARDS
+   ========================================================= */
+.hobbies-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.hobby-card {
+    background: rgba(243, 246, 255, 0.7);
+    border: 2px solid #d8e2ff;
+    padding: 28px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    text-decoration: none;
+    transition: 0.35s;
+    color: #4f5c80 !important;
+    backdrop-filter: blur(6px);
+}
+
+.hobby-card:hover {
+    transform: translateY(-8px);
+    border-color: #b7c8ef;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+.hobby-icon {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* =========================================================
+   8. TABLES
+   ========================================================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+th, td {
+    border: 2px solid #b5cae9;
+    padding: 15px;
+}
+
+th {
+    background: linear-gradient(135deg, #c8d7f6, #929acb);
+    color: white;
+}
+
+/* =========================================================
+   9. INFO BOXES
+   ========================================================= */
+.tutorial-box {
+    padding: 15px;
+    background: #f3f5ff;
+    border: 2px solid #d3dcff;
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+}
+
+.tutorial-box a {
+    color: #6f7bb2;
+    font-weight: bold;
+    text-decoration: none;
+}
+/* Make entire tutorial-box clickable */
+.tutorial-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.tutorial-link:hover {
+    background: #e9ecff; /* subtle hover tint */
+    transform: translateY(-3px);
+}
+
+.fun-fact {
+    background: #e7edff;
+    padding: 20px;
+    border-left: 6px solid #b5c9ec;
+    border-radius: var(--radius-md);
+    margin-top: 20px;
+}
+
+/* =========================================================
+   10. FOOTER
+   ========================================================= */
+footer {
+    padding: 22px;
+    background: #4f5c80;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+}
+
+/* =========================================================
+   11. NAV-LIKE BUTTONS
+   ========================================================= */
+.back-home {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #8ba2d9;
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.back-home:hover {
+    background: #738ac7;
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   12. FLOATING CONTACT BUTTON
+   ========================================================= */
+.contact-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #909acb;
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.contact-btn:hover {
+    background: #b6c4f0;
+    transform: translateY(-3px);
+}
+
+/* =========================================================
+   13. CONTACT POPUP FORM
+   ========================================================= */
+.contact-form {
+    position: fixed;
+    bottom: 95px;
+    right: 25px;
+    width: 280px;
+    background: white;
+    padding: 20px;
+    border-radius: var(--radius-md);
+    border: 2px solid #d8e3ff;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.2);
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(15px);
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.contact-form.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.contact-form h3 {
+    font-size: 1.2em;
+    color: #6f7bb2;
+    margin-bottom: 10px;
+}
+
+.contact-form label {
+    font-size: 0.85em;
+    color: #5a668e;
+    margin-top: 10px;
+    display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: var(--radius-md);
+    border: 2px solid #cfd8fa;
+    background: #f8f9ff;
+    margin-top: 5px;
+    outline: none;
+    font-size: 0.95em;
+    resize: none;
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #8ba2d9;
+}
+
+/* =========================================================
+   14. SEND BUTTON
+   ========================================================= */
+.send-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: var(--radius-md);
+    background: #8ba2d9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.send-btn:hover {
+    background: #738ac7;
+}
